@@ -1,3 +1,5 @@
+Author: Kyzer Fox
+
 # AVWX - Aviation Weather & Flight Category Radar
 
 A lightweight, high-performance aviation weather web service built with Python, Flask, and Vanilla HTML/CSS/JS. Provides real-time decoded METAR surface observations, Terminal Aerodrome Forecasts (TAF), FAA flight categories (VFR, MVFR, IFR, LIFR), and an interactive station map.
