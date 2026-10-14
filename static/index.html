@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Cowboy - Backcountry Weather Dispatch</title>
+  <meta name="description"
+    content="Backcountry aviation weather briefed straight in Sam Elliott's authentic western drawl.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="western-frame">
+    <!-- Wild Western Masthead -->
+    <header class="western-masthead">
+      <div class="masthead-content">
+        <h1 class="ranch-title">SKY COWBOY</h1>
+        <p class="ranch-tagline">Sam Elliot's Aviation Weather Briefing</p>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <!-- Search Input & Presets -->
+      <section class="search-section">
+        <form id="searchForm" class="search-form">
+          <div class="search-input-row">
+            <input type="text" id="stationInput" name="ids" placeholder="Enter ICAO codes (e.g. KLXV, KJAC, KMYL)"
+              value="KLXV, KJAC, KMYL" spellcheck="false" autocomplete="off" required>
+            <button type="submit" id="searchBtn" class="search-submit-btn">PULL BRIEFING</button>
+          </div>
+
+          <!-- Three Backcountry Presets Only -->
+          <div class="airfield-chips">
+            <span class="chips-title">Backcountry Strips:</span>
+            <button type="button" class="airfield-chip" data-code="KLXV">Leadville, CO (KLXV)</button>
+            <button type="button" class="airfield-chip" data-code="KJAC">Jackson Hole, WY (KJAC)</button>
+            <button type="button" class="airfield-chip" data-code="KMYL">McCall, ID (KMYL)</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Feed Container -->
+      <section class="feed-section">
+        <div id="loadingIndicator" class="wire-card loading-state hidden">
+          <div class="wire-spinner"></div>
+          <p class="wire-msg">Pouring coffee &bull; Listening to the teletype &bull; Drafting Sam's briefing...</p>
+        </div>
+
+        <div id="errorMessage" class="wire-card error-state hidden"></div>
+
+        <div id="reportsList" class="briefings-stack"></div>
+      </section>
+    </main>
+
+    <!-- Floating Centered Will Rogers Quote Footer -->
+    <footer class="western-footer">
+      <div class="floating-quote">
+        <p class="quote-text">&ldquo;If you can walk away from a landing, it's a good landing. If you use the airplane
+          the next day, it's an outstanding landing.&rdquo;</p>
+        <cite class="quote-author">&mdash; Chuck Yeager <span>USAF Officer &amp; Flying Ace</span></cite>
+      </div>
+
+      <div class="footer-meta">
+        <p>Live observation telemetry sourced from <a href="https://aviationweather.gov" target="_blank"
+            rel="noopener">NOAA AviationWeather.gov</a></p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,513 @@
+/* ==========================================================================
+   SKY COWBOY - Wild Western Aesthetic
+   Inspired by Ruthless Studio's Sunbaked Americana & Western Design
+   Clean, open flow with reduced boxiness and floating typography
+   ========================================================================== */
+
+:root {
+  /* Sun-baked Desert & Canyon Palette */
+  --sand-canvas: #f3ecde;
+  --sand-card: #faf5eb;
+  --sand-inset: #ede4d2;
+
+  --iron-dark: #211a15;
+  --iron-medium: #45372c;
+  --iron-light: #705e4f;
+  --iron-faint: #9c8a7b;
+
+  --rust-terracotta: #bd4d32;
+  --rust-dark: #9e3d25;
+  --rust-light: #d66448;
+
+  --desert-gold: #d49438;
+  --desert-gold-dark: #b87a24;
+
+  --border-divider: rgba(33, 26, 21, 0.14);
+  --border-strong: #211a15;
+
+  /* Category Western Patches */
+  --vfr-tint: #3b5c42;
+  --vfr-bg: #e6eee7;
+  --vfr-border: #3b5c42;
+
+  --mvfr-tint: #2c5270;
+  --mvfr-bg: #e5edf5;
+  --mvfr-border: #2c5270;
+
+  --ifr-tint: #bd4d32;
+  --ifr-bg: #faebe8;
+  --ifr-border: #bd4d32;
+
+  --lifr-tint: #7a326c;
+  --lifr-bg: #f8ecf6;
+  --lifr-border: #7a326c;
+
+  --font-western: Rockwell, "Rockwell Extra Bold", "Playfair Display", Clarendon, Georgia, serif;
+  --font-serif: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--sand-canvas);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(189, 77, 50, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(212, 148, 56, 0.05) 0%, transparent 40%);
+  color: var(--iron-dark);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  padding: 2.5rem 1.25rem 4rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.western-frame {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+/* ==========================================================================
+   Western Masthead (Open & Grounded)
+   ========================================================================== */
+
+.western-masthead {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-divider);
+}
+
+.masthead-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ranch-title {
+  font-family: var(--font-western);
+  font-size: 3.4rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: var(--iron-dark);
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 2px 2px 0px rgba(212, 148, 56, 0.35);
+}
+
+.ranch-tagline {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--iron-medium);
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   Search Section (Clean & Open Flow)
+   ========================================================================== */
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.docket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.search-input-row {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.search-input-row input {
+  flex: 1;
+  background: #ffffff;
+  color: var(--iron-dark);
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 0.85rem 1.1rem;
+  outline: none;
+  box-shadow: 2px 2px 0px var(--border-strong);
+  transition: all 0.15s ease;
+}
+
+.search-input-row input:focus {
+  border-color: var(--rust-terracotta);
+  box-shadow: 2px 2px 0px var(--rust-terracotta);
+}
+
+.search-submit-btn {
+  background: var(--rust-terracotta);
+  color: #ffffff;
+  font-family: var(--font-western);
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  padding: 0.85rem 1.75rem;
+  border: 2px solid var(--border-strong);
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px var(--border-strong);
+  transition: all 0.12s ease;
+  white-space: nowrap;
+}
+
+.search-submit-btn:hover {
+  background: var(--rust-dark);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--border-strong);
+}
+
+.search-submit-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border-strong);
+}
+
+.search-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Three Backcountry Presets */
+.airfield-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chips-title {
+  font-family: var(--font-western);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--iron-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.airfield-chip {
+  background: var(--sand-card);
+  border: 1.5px solid var(--border-strong);
+  color: var(--iron-dark);
+  font-family: var(--font-western);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.35rem 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  box-shadow: 1px 1px 0px var(--border-strong);
+}
+
+.airfield-chip:hover {
+  background: var(--desert-gold);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 2px 2px 0px var(--border-strong);
+}
+
+/* ==========================================================================
+   Briefings Feed & Cohesive Card Structure (No Boxes in Boxes)
+   ========================================================================== */
+
+.briefings-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cowboy-card {
+  background: var(--sand-card);
+  border: 2px solid var(--border-strong);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.15s ease;
+}
+
+/* Card Header Row */
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.65rem 0.75rem;
+}
+
+.station-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.icao-brand {
+  font-family: var(--font-western);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: var(--iron-dark);
+}
+
+.name-brand {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--iron-medium);
+  font-weight: 600;
+}
+
+.patch-stamp {
+  font-family: var(--font-western);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 3px;
+  border: 1.5px solid transparent;
+  text-transform: uppercase;
+}
+
+.patch-stamp.vfr { color: var(--vfr-tint); background: var(--vfr-bg); border-color: var(--vfr-border); }
+.patch-stamp.mvfr { color: var(--mvfr-tint); background: var(--mvfr-bg); border-color: var(--mvfr-border); }
+.patch-stamp.ifr { color: var(--ifr-tint); background: var(--ifr-bg); border-color: var(--ifr-border); }
+.patch-stamp.lifr { color: var(--lifr-tint); background: var(--lifr-bg); border-color: var(--lifr-border); }
+
+/* Card Briefing Narrative (Natural Open Flow) */
+.card-briefing {
+  padding: 0.5rem 1.65rem 1.25rem;
+}
+
+.briefing-headline {
+  font-family: var(--font-western);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--rust-terracotta);
+  line-height: 1.3;
+  margin-bottom: 0.65rem;
+}
+
+.briefing-quote {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--iron-dark);
+}
+
+/* Open Stats Row (Seamless, No Heavy Grid Boxes) */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  padding: 0.85rem 1.65rem;
+  border-top: 1px solid var(--border-divider);
+  border-bottom: 1px solid var(--border-divider);
+  background: rgba(237, 228, 210, 0.45);
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-family: var(--font-western);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--iron-light);
+  margin-bottom: 0.2rem;
+}
+
+.stat-val {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--iron-dark);
+}
+
+.stat-sub {
+  font-size: 0.76rem;
+  color: var(--iron-medium);
+  margin-top: 0.1rem;
+}
+
+/* Clean Raw Tape Row */
+.tape-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.65rem;
+  background: var(--sand-inset);
+}
+
+.tape-code {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--iron-medium);
+  white-space: pre-wrap;
+  word-break: break-all;
+  flex: 1;
+}
+
+.tape-copy-btn {
+  background: #ffffff;
+  color: var(--iron-dark);
+  border: 1.5px solid var(--border-strong);
+  font-family: var(--font-western);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 1px 1px 0px var(--border-strong);
+  transition: all 0.12s ease;
+}
+
+.tape-copy-btn:hover {
+  background: var(--desert-gold);
+  color: #ffffff;
+}
+
+/* Card Footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 1.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--iron-faint);
+  border-top: 1px dashed rgba(33, 26, 21, 0.2);
+}
+
+.stale-stamp {
+  color: var(--rust-terracotta);
+  font-weight: 800;
+}
+
+/* State Cards */
+.wire-card,
+.empty-state {
+  background: var(--sand-card);
+  border: 2px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  box-shadow: 4px 4px 0px var(--border-strong);
+}
+
+.wire-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--iron-light);
+  border-top-color: var(--rust-terracotta);
+  border-radius: 50%;
+  animation: wireSpin 0.8s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes wireSpin {
+  to { transform: rotate(360deg); }
+}
+
+.wire-msg {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--iron-medium);
+}
+
+.error-state {
+  color: #ffffff;
+  background: var(--rust-dark);
+  border-color: var(--border-strong);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==========================================================================
+   Floating Centered Will Rogers Quote (No Box)
+   ========================================================================== */
+
+.western-footer {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border-top: 2px solid var(--border-divider);
+}
+
+.floating-quote {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.quote-text {
+  font-family: var(--font-western);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--iron-dark);
+  margin-bottom: 0.75rem;
+}
+
+.quote-author {
+  font-family: var(--font-western);
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--rust-terracotta);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-style: normal;
+  display: block;
+}
+
+.quote-author span {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--iron-light);
+  text-transform: none;
+  letter-spacing: normal;
+  display: block;
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+.footer-meta {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--iron-faint);
+}
+
+.footer-meta a {
+  color: var(--rust-terracotta);
+  text-decoration: underline;
+  font-weight: 600;
+}

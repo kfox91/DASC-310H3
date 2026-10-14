@@ -1,0 +1,118 @@
+[
+  {
+    "icaoId": "KDEN",
+    "receiptTime": "2026-10-13T00:56:37.024Z",
+    "obsTime": 1791852780,
+    "reportTime": "2026-10-13T01:00:00.000Z",
+    "temp": 22.2,
+    "dewp": 0,
+    "wdir": 190,
+    "wspd": 14,
+    "visib": "10+",
+    "altim": 1009.2,
+    "slp": 1002,
+    "qcField": 4,
+    "metarType": "METAR",
+    "rawOb": "METAR KDEN 130053Z 19014KT 10SM FEW130 22/00 A2980 RMK AO2 PK WND 19026/0019 SLP020 T02220000",
+    "lat": 39.8466,
+    "lon": -104.6562,
+    "elev": 1656,
+    "name": "Denver Intl, CO, US",
+    "cover": "FEW",
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 13000
+      }
+    ],
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "KJFK",
+    "receiptTime": "2026-10-13T00:54:09.990Z",
+    "obsTime": 1791852660,
+    "reportTime": "2026-10-13T01:00:00.000Z",
+    "temp": 18.9,
+    "dewp": 12.8,
+    "wdir": 330,
+    "wspd": 11,
+    "visib": "10+",
+    "altim": 1011.6,
+    "slp": 1011.3,
+    "qcField": 12,
+    "metarType": "METAR",
+    "rawOb": "METAR KJFK 130051Z 33011KT 10SM BKN250 19/13 A2987 RMK AO2 SLP113 T01890128 $",
+    "lat": 40.6392,
+    "lon": -73.7639,
+    "elev": 3,
+    "name": "New York/JF Kennedy Intl, NY, US",
+    "cover": "BKN",
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 25000
+      }
+    ],
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "KMSP",
+    "receiptTime": "2026-10-13T00:56:24.955Z",
+    "obsTime": 1791852780,
+    "reportTime": "2026-10-13T01:00:00.000Z",
+    "temp": 18.9,
+    "dewp": 11.7,
+    "wdir": 350,
+    "wspd": 11,
+    "visib": "10+",
+    "altim": 1003.8,
+    "slp": 1003.5,
+    "qcField": 4,
+    "metarType": "METAR",
+    "rawOb": "METAR KMSP 130053Z 35011KT 10SM FEW060 19/12 A2964 RMK AO2 SLP035 T01890117",
+    "lat": 44.8852,
+    "lon": -93.2313,
+    "elev": 255,
+    "name": "Minneapolis-St Paul Intl, MN, US",
+    "cover": "FEW",
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 6000
+      }
+    ],
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "KSEA",
+    "receiptTime": "2026-10-13T00:56:37.826Z",
+    "obsTime": 1791852780,
+    "reportTime": "2026-10-13T01:00:00.000Z",
+    "temp": 14.4,
+    "dewp": 3.9,
+    "wdir": 0,
+    "wspd": 0,
+    "visib": "10+",
+    "altim": 1017.7,
+    "slp": 1018.4,
+    "qcField": 4,
+    "metarType": "METAR",
+    "rawOb": "METAR KSEA 130053Z 00000KT 10SM FEW040 FEW210 14/04 A3005 RMK AO2 SLP184 T01440039",
+    "lat": 47.4447,
+    "lon": -122.3144,
+    "elev": 115,
+    "name": "Seattle-Tacoma Intl, WA, US",
+    "cover": "FEW",
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 4000
+      },
+      {
+        "cover": "FEW",
+        "base": 21000
+      }
+    ],
+    "fltCat": "VFR"
+  }
+]
