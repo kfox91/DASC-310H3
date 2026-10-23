@@ -13,7 +13,7 @@ from unittest.mock import MagicMock, patch
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 import pytest
-from webapp.main import app
+from webapp.app import app
 import webapp.weather as weather
 
 
