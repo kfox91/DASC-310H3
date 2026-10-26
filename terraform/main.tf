@@ -86,14 +86,20 @@ resource "azurerm_linux_web_app" "app" {
     # The free tier (F1) does not support Always On.
     always_on = var.app_service_sku != "F1"
 
+    # The app in ../app is Python/Flask, not Node.
     application_stack {
-      node_version = "22-lts"
+      python_version = "3.12"
     }
+
+    # app.py exposes the Flask object as `app`.
+    app_command_line = "gunicorn --bind=0.0.0.0 --timeout 600 app:app"
   }
 
   app_settings = {
     APPLICATIONINSIGHTS_CONNECTION_STRING = azurerm_application_insights.appi.connection_string
     ENVIRONMENT                           = var.environment
+    # Zip deploy only installs requirements.txt when a build is requested.
+    SCM_DO_BUILD_DURING_DEPLOYMENT = "true"
   }
 
   # Only added when the matching database is enabled.

@@ -9,7 +9,7 @@ Routes:
 import os
 import requests
 from flask import Flask, jsonify, request, send_from_directory
-import webapp.weather as weather
+import weather
 
 app = Flask(__name__, static_folder="static", static_url_path="")
 
