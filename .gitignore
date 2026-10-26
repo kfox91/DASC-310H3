@@ -1,0 +1,5 @@
+# Packaged application code (rebuilt before each deploy)
+app.zip
+
+# macOS Finder metadata
+.DS_Store
